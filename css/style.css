@@ -1,0 +1,120 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*  { box-sizing: border-box; }
+    
+:root{
+  --primary-color:     #F05A28;
+  --secondary-color:   #99001A;
+  --light-color :      #F4F7F6;
+  --dark-color:        #404041;
+  --extra-light:       #ccc8c4;
+
+  --base-color:        #ffffff;
+  --black_color:       #000000;
+  --gray-color:        #999999;
+  --offwhite       :   #f6f6f6;
+  --section_bg:        #f4f4f4;
+  --border_color:      #edeff2;
+  --title-color    :   #2a2a2a;
+
+  --font_1 : 'Montserrat', sans-serif;   /* //Heading */
+}
+
+body{
+	margin:0;
+	padding: 0;
+	color: var(--dark-color);
+	font-size: 1rem;
+	font-family: var(--font_1);
+}
+
+.container { padding: 60px 0; width: 80%; margin:0 auto; }
+
+h1 { 
+  text-align: center; 
+  margin: 0 0 60px 0; 
+  color: var(--secondary-color); 
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h1::before, h1::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 2px;
+  /* 
+    width: 120px;
+    calc(50% - 400px); 
+  */
+  width: calc(50% - 40%);
+  margin: 0 26px;
+  background: var(--primary-color);
+}
+
+h2 { 
+  text-align: center; 
+  color: var(--secondary-color); 
+  font-weight: normal; 
+  font-size: 23px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid var(--primary-color);
+  width: 30px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 6px 0;
+}
+
+svg {
+  height: 20px;
+  width: 20px;
+  fill: var(--secondary-color);
+}
+
+.pt-testimonial-sec {
+  /* width: 40%; */
+  text-align: center;
+  background: var(--light-color);
+  padding: 0 30px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.pt-testimonial-sec-description {
+  margin: 25px 0;
+}
+
+.pt-testimonial-sec-user {
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+}
+
+.pt-testimonial-sec-user > img {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 1px solid var(--primary-color);
+  object-fit: cover;
+  padding: 4px;
+}
+
+.wrapper {
+  position: relative;
+  bottom: 60px; 
+}
+
+@media screen and (max-width: 600px) {
+  h1::before, h1::after {
+    content: '';
+    display: none;
+  }
+}
